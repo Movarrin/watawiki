@@ -1,22 +1,22 @@
 {{!-- new user registration page --}}
 <form action="/users/register" method="POST">
 	<fieldset>
-		<legend>Login</legend>
+		<legend>Register</legend>
 		<p>
 			<label for="userName">User Name</label>
 			<input type="text" name="user_name" id="userName" placeholder="Enter User Name Here" />
 		</p>
 		<p>
 			<label for="userPword">User Password</label>
-			<input type="text" name="user_pword" id="userPword" placeholder="Enter Password Here" />
+			<input type="password" name="user_pword" id="userPword" placeholder="Enter Password Here" />
 		</p>
 		<p>
 			<label for="userPword">Re-Enter Password</label>
-			<input type="text" name="user_pword2" id="userPword" placeholder="Re-Enter Password Here" />
+			<input type="password" name="user_pword2" id="userPword" placeholder="Re-Enter Password Here" />
 		</p>
 		<p>
-			<label for="userPword">User email</label>
-			<input type="text" name="user_email" id="userEmail" placeholder="Enter Email Here" />
+			<label for="userEmail">User email</label>
+			<input type="email" name="user_email" id="userEmail" placeholder="Enter Email Here" />
 		</p>
 		<input type="submit" value="Login"/>
 	</fieldset>

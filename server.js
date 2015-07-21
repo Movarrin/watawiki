@@ -1,6 +1,5 @@
 // watawiki application
 
-
 var express = require( 'express' );
 var app = express();
 var port = 3000;
@@ -14,6 +13,7 @@ var path = require( 'path' );
 var methodOverride = require( 'method-override' );
 var session = require( 'express-session' );
 var flash = require( 'connect-flash' );
+var bcrypt = require( 'bcrypt' );
 
 app.use( express.static( 'public' ) );
 
@@ -22,6 +22,7 @@ app.engine( 'handlebars', exphbs( {
 	defaultLayout: 'main',
 	extname: 'handlebars'
 } ) );
+
 app.set( 'view engine', 'handlebars' );
 app.set( 'views', path.join( __dirname, 'views' ) );
 
@@ -29,12 +30,13 @@ app.set( 'views', path.join( __dirname, 'views' ) );
 app.use( bodyParser.urlencoded( {
 	extended: false
 } ) );
+
 app.use( session( {
 	secret: 'anystringoftext',
 	saveUninitialized: true,
 	resave: true
 } ) );
-app.use( flash() );
+
 fs.readdirSync( './controllers' ).forEach( function( file ) {
 	if ( file.substr( -3 ) == '.js' ) {
 		route = require( './controllers/' + file );

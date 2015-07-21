@@ -6,9 +6,9 @@ var db = require( '../models/orm/db.js' );
 
 module.exports.Article = {
 
-	// index artist module
-	alll: function( cb ) {
-		db.all( 'articles', function( artists ) {
+	// index article module
+	all: function( table, cb ) {
+		db.all( table, function( articles ) {
 			var data = {
 
 				articles: articles
@@ -31,6 +31,16 @@ module.exports.Article = {
 
 				cb( data );
 			} );
+		} );
+	},
+
+	// get an article object that already has author  in it
+	createArticle: function( table, obj, cb ) {
+
+		db.create( table, obj, function( data ) {
+
+			cb( data );
+
 		} );
 	},
 

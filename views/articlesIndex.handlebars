@@ -1,0 +1,19 @@
+<table>
+	<tr>
+		<th>Article</th>
+		<th>Authored By</th>
+		<th>Posted</th>
+		<th>Edited By</th>
+		<th>Tags</th>
+	</tr>
+	{{#each articles}}
+	<tr>
+		<td>{{{article_title}}}</td>
+		<td>{{user_id}}</td>
+		<td>{{creation_date}}</td>
+		{{!-- <td>{{none}}</td> --}}
+	</tr>
+	{{/each}}
+</table>
+<br><br>
+<button><a href="/articles/new">Post New Article</button>

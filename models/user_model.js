@@ -44,4 +44,13 @@ module.exports.User = {
 
 	},
 
+	createUser: function( table, obj, cb ) {
+		// console.log( obj );
+
+		db.create( table, obj, function( users ) {
+
+			cb( users );
+		} );
+	},
+
 };

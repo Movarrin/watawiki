@@ -1,0 +1,24 @@
+{{!-- write article page --}}
+
+<br> <br>
+<form action="/articles/write" method="POST">
+	<fieldset>
+		<legend> Create New Article</legend>
+		<p>
+			<label for="articleTitle">Title : </label><br>
+			<input type="text" name="article_title" id="articleTitle" />
+		</p>
+		<p>
+			<label for="articleBody">Article : </label><br>
+			<textarea name="article_body" id="articleBody" rows="10" cols="50"></textarea>
+		</p>
+		<p>
+			<label for="articleTags">Tags : </label><br>
+			<textarea name="article_tags" id="articleTags" rows="1" cols="50" placeholder="separate tags with commas"></textarea>
+		</p>
+		<input type="submit" value="Submit New Post"/>
+	</fieldset>
+</form>
+<div>
+	<p>{{msg}}</p>
+</div>

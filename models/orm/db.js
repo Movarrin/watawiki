@@ -1,11 +1,13 @@
 var pg = require( 'pg' );
-var dbUrl = {
-	username: 'andrew',
-	password: 'empty',
-	database: 'watawiki_db',
-	host: 'localhost',
-	port: 5432
-};
+// var dbUrl = {
+// 	username: 'andrew',
+// 	password: 'empty',
+// 	database: 'watawiki_db',
+// 	host: 'localhost',
+// 	port: 5432
+// };
+
+var dbUrl = proces.env.DATABASE_URL;
 
 module.exports = {
 	end: function() {

@@ -1,11 +1,11 @@
 var pg = require( 'pg' );
-var dbUrl = {
+var dbUrl = process.env.DATABASE_URL || {
 	username: 'andrew',
 	password: 'empty',
 	database: 'watawiki_db',
 	host: 'localhost',
 	port: 5432
-} || process.env.DATABASE_URL;
+};
 
 // var dbUrl = process.env.DATABASE_URL;
 

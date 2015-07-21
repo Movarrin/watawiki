@@ -7,7 +7,7 @@ var pg = require( 'pg' );
 // 	port: 5432
 // };
 
-var dbUrl = proces.env.DATABASE_URL;
+var dbUrl = process.env.DATABASE_URL;
 
 module.exports = {
 	end: function() {
